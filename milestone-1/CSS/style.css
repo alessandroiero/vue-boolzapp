@@ -1,0 +1,132 @@
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Typo */
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/* Common */
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+.icona {
+    width: 80px;
+}
+
+body {
+    background-color: #d9dbd4;
+}
+
+.radius {
+    border-radius: 50%;
+}
+
+.wrapper{
+    height: calc(100% - 70px);
+}
+/* Header */
+header {
+    background-color: #009688;
+    flex-grow: 1;
+    height: 100px;
+}
+
+
+/* Main */
+#app {
+    height: 80vh;
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 70%;
+    transform: translateY(-80px);
+    max-width: 1280px;
+}
+
+.header-app {
+    height: 3.125rem;
+    background-color: #eaeaea;
+}
+
+/* left */
+aside.left-bar {
+    background-color: white;
+    height: 50rem;
+}
+
+aside ul {
+    padding-left: 0;
+}
+
+.left-bar .header-app {
+    border-right: 1px solid white;
+}
+
+.notifiche {
+    background-color: #8edafc;
+}
+
+.notifiche .fa-bell-slash {
+    background-color: white;
+    font-size: 1.25rem;
+    color: #8edafc;
+}
+
+.section-contacts img {
+    height: 60px;
+    width: 3.75rem;
+}
+
+.section-contacts {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.section-contacts h3 {
+    font-size: 1.25rem;
+}
+
+.section-contacts .msg {
+    font-size: .75rem;
+}
+
+/* right */
+main.right-bar {
+    flex-grow: 1;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat {
+    height: 85%;
+    background-image: url(../../img/img/mine.jpg);
+}
+
+.messaggio-verde {
+    background-color: green;
+}
+
+.messaggio-bianco {
+    background-color: white;
+}
+
+.send-text {
+    width: 100%;
+    height: 70px;
+    margin-top: auto;
+    background-color: blueviolet;
+    padding-bottom: 0.625rem;
+}
+
+/* Footer */
