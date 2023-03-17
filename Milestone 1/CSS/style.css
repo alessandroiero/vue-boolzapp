@@ -5,3 +5,39 @@
     box-sizing: border-box;
 }
 
+/* Typo */
+/* Common */
+body{
+    background-color: pink;
+}
+
+/* Header */
+header{
+    background-color: green;
+    flex-grow: 1;
+    height: 100px;
+}
+/* Main */
+#app{
+    height: 80vh;
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 80%;
+    transform: translateY(-80px);
+}
+
+aside.left-bar{
+    background-color: white;
+    height: 50rem;
+}
+
+main.right-bar{
+    background-color: blue;
+    flex-grow:1;
+}
+
+.header-app{
+    height: 3.125rem;
+    background-color: brown;
+}
+/* Footer */
