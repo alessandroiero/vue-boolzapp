@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <!-- /favicon -->
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <!-- /Font Google -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- /Font Awesome -->
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--/Bootstrap CSS-->
+    <!-- Css -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- /Css -->
+</head>
+
+<body>
+    <!-- contenitore app -->
+    <div class="wrapper">
+        <!-- bar gree -->
+        <div class="d-flex green-bar"></div>
+        <!-- /bar green -->
+
+        <!-- App -->
+        <div id="app" class="container">
+            <!-- header app -->
+            <header class="d-flex">
+                <div class="header-app col-4 d-flex justify-content-between align-items-center">
+                    <div class="col-left d-flex align-items-center">
+                        <div class="icona radius p-3">
+                            <img class='radius' src="../img/img/avatar_1.jpg" alt="">
+                        </div>
+                        <span>Alessandro Iero</span>
+                    </div>
+                    <!-- icone -->
+                    <div class="col-right d-flex justify-content-between col-2 me-3">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <!-- /icone -->
+                </div>
+                <div class="header-app col-8 d-flex justify-content-between align-items-center ">
+                    <div class="col-left d-flex align-items-center">
+                        <div class="avatar">avatar</div>
+                        <div class="name-date d-flex flex-column">
+                            <div class="name">nome</div>
+                            <div class="data">data</div>
+                        </div>
+                    </div>
+                    <!-- icone -->
+                    <div class="col-right d-flex justify-content-between col-1 me-3">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <!-- /icone -->
+                </div>
+                <!-- /header app -->
+            </header>
+            <!-- /header -->
+
+
+
+            <main>
+                <!-- left -->
+                <aside class="left-bar gx-0 d-flex flex-column col-4">
+                    <!-- notifiche -->
+                    <div class="notifiche d-flex align-items-center ">
+                        <div class="icona radius p-4">
+                            <i class="fa-regular fa-bell-slash radius p-2"></i>
+                        </div>
+                        <div class="col-right d-flex flex-column justify-content-center">
+                            <h2 class="top-notify">Ricevi notifiche di nuovi messaggi</h2>
+                            <p class="dats">Attiva notifiche desktop</p>
+                        </div>
+                    </div>
+                    <!-- /notifiche -->
+
+                    <!-- Searchbar -->
+                    <div class="searchbar">
+                        <div class="p-3">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- contatti -->
+                    <div class="section-contacts">
+                        <ul class='contatti d-flex flex-column'>
+                            <!-- creiamo un ciclo for per tutto l'array contacts -->
+                            <li v-for="(contact,i) in contacts">
+                                <div class="lista-contatti d-flex">
+                                    <div class="avatar-container">
+                                        <img class="radius img-fluid" :src="`${contact.avatar}`" :alt="contact.name">
+                                    </div>
+                                    <div class="col-right">
+                                        <h3 class="nome-utente">{{contact.name}}</h3>
+                                        <div class="msg">
+                                            {{contact.messages[contact.messages.length-1].message}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /contatti -->
+                </aside>
+                <!-- left -->
+
+                <!-- right -->
+                <div class="right-bar gx-0 ">
+                    <!-- chat msg -->
+                    <div class="chat d-flex">
+                        <div class="container-messaggi px-5">
+                        </div>
+                    </div>
+                    <!-- /chat msg -->
+
+                    <!-- Send Msg -->
+                    <div class="send-msg d-flex align-items-center">
+                        <!-- col left msg -->
+                        <div class="col-left col-2">
+                            <i class="fa-regular fa-face-smile"></i>
+                        </div>
+                        <!--/col left msg -->
+                        <!-- col center msg -->
+                        <div class="col-center">                                
+                            <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                        </div>
+                        <!-- /col center msg -->
+                        <!-- col right msg -->
+                        <div class="col-right col-2">
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
+                        <!-- /col right msg -->
+                    </div>
+                    <!-- /Send Msg -->
+                </div>
+            </main>
+        </div>
+        <!-- /App -->
+    </div>
+
+
+    <!-- vue -->
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <!-- /vue -->
+    <!-- js -->
+    <script src="js/main.js"></script>
+    <!-- /js -->
+</body>
+
+</html>

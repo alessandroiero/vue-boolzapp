@@ -1,0 +1,18 @@
+/* Common */
+li {
+    list-style: none;
+}
+p{
+    margin-bottom: 0;
+}
+img {
+    width: 100%;
+}
+
+body {
+    background-color: #d9dbd4;
+}
+
+.radius {
+    border-radius: 50%;
+}
