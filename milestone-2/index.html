@@ -55,10 +55,13 @@
                 </div>
                 <div class="header-app col-8 d-flex justify-content-between align-items-center ">
                     <div class="col-left d-flex align-items-center">
-                        <div class="avatar">avatar</div>
-                        <div class="name-date d-flex flex-column">
-                            <div class="name">nome</div>
-                            <div class="data">data</div>
+                        <div class="user-opened d-flex align-items-center">
+                            <div class="icona radius p-3">
+                                <img class="radius" :src="`${contacts[contatto].avatar}`" alt="avatar">
+                            </div>
+                            <div>
+                                <p class="nome mx-2">{{contacts[contatto].name}}</p>
+                            </div>
                         </div>
                     </div>
                     <!-- icone -->
@@ -85,7 +88,7 @@
                         </div>
                         <div class="col-right d-flex flex-column justify-content-center">
                             <h2 class="top-notify">Ricevi notifiche di nuovi messaggi</h2>
-                            <p class="dats">Attiva notifiche desktop</p>
+                            <p class="desktop-notify">Attiva notifiche desktop</p>
                         </div>
                     </div>
                     <!-- /notifiche -->
@@ -102,7 +105,7 @@
                     <div class="section-contacts">
                         <ul class='contatti d-flex flex-column'>
                             <!-- creiamo un ciclo for per tutto l'array contacts -->
-                            <li v-for="(contact,i) in contacts">
+                            <li @click="contactOpened(i)" v-for="(contact,i) in contacts">
                                 <div class="lista-contatti d-flex">
                                     <div class="avatar-container">
                                         <img class="radius img-fluid" :src="`${contact.avatar}`" :alt="contact.name">
@@ -124,8 +127,11 @@
                 <!-- right -->
                 <div class="right-bar gx-0 ">
                     <!-- chat msg -->
-                    <div class="chat d-flex">
-                        <div class="container-messaggi px-5">
+                    <div class="chat">
+                        <div class="container-messaggi d-flex px-5" v-for="(message) in contacts[contatto].messages" :class="message.status">
+                            <div class="messaggio">
+                                <span>{{message.message}}</span>
+                            </div>
                         </div>
                     </div>
                     <!-- /chat msg -->

@@ -73,10 +73,11 @@ aside ul {
     padding: 5px 10px
 }
 
-.contatti li>div{
+.contatti li>div {
     padding-top: 10px;
 }
-.contatti .avatar-container{
+
+.contatti .avatar-container {
     padding-right: .625rem;
 }
 
@@ -93,6 +94,11 @@ aside ul {
     flex-direction: column;
     width: 65%;
 }
+
+.nome img {
+    width: 100%;
+}
+
 /* chat */
 .chat {
     flex-grow: 1;
@@ -101,32 +107,42 @@ aside ul {
     overflow-y: auto;
 }
 
-.container-messaggi {
-    background-color: yellow;
-}
 
-.messaggio-verde {
-    background-color: green;
-}
-
-.messaggio-bianco {
-    background-color: white;
-}
-
-.msg{
+.msg {
     color: grey;
 }
+
+.container-messaggi.sent {
+    justify-content: flex-end;
+}
+
+.container-messaggi.sent .messaggio {
+    background-color: #d5f9ba;
+}
+
+.messaggio {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.container-messaggi:not(:last-child) {
+    margin-bottom: 10px;
+}
+
 /* send msg */
 
 .send-msg {
     height: 65px;
     background-color: white;
 }
-.send-msg .col-center{
+
+.send-msg .col-center {
     flex-grow: 1;
 }
+
 .send-msg .col-left,
-.send-msg .col-right{
+.send-msg .col-right {
     justify-content: center;
     display: flex;
     font-size: 1.25rem;

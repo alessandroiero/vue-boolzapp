@@ -6,6 +6,7 @@ createApp({
     data() {
         return {
             // Array Contatti
+            contatto: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -173,6 +174,9 @@ createApp({
     },
     // funzioni
     methods: {
+        contactOpened(i){
+            this.contatto=i;
+        },
 
     }
 }).mount('#app')
