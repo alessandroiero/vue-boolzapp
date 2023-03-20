@@ -178,5 +178,25 @@ createApp({
         contactOpened(i){
             this.contatto=i;
         },
-}
+        msgSent(){
+            // variabile nuovo messaggio
+            const newMsg = {
+                message: this.newText,
+                status: 'sent'
+            }
+            // pushamo il nuovo messaggio all'interno dell'array contacts
+            this.contacts[this.contatto].messages.push(newMsg);
+            // all'invio verrà cancellato il testo nell'input
+            this.newText = '';
+            // funzione timeout per la risposta
+            setTimeout(() =>{
+                const newResponse = {
+                    message: 'OK!!',
+                    status: 'received'
+                }
+                this.contacts[this.contatto].messages.push(newResponse);
+            },500)
+        },
+    }
+
 }).mount('#app')
