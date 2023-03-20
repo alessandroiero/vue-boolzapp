@@ -17,3 +17,7 @@ Andiamo a realizzare la versione Web di una nota applicazione
 
 -facciamo in modo che scrivendo un messaggio nell'input send-msg venga aggiunto all'array contacts tramite la creazione di un evento che gli pusherà il nuovo messaggio. Creo anche una funzione con setTimeout per la risposta.
 -il messaggio comparirà verde (inviato) o bianco (ricevuto) tramite lo status (received, sent)
+
+# Milestone 4
+
+-Creiamo una funzione che andremo ad inserire all'interno di un evento. Questa funzione dovrà filtrare i vari nomi dall'array contacts e ritornarli in base a quanto scritto altrimenti non comparirà nulla.

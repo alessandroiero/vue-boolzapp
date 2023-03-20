@@ -1,0 +1,171 @@
+/* Main */
+#app {
+    height: calc(100vh - 80px);
+    overflow: hidden;
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 70%;
+    transform: translateY(-80px);
+    max-width: 1280px;
+}
+
+.header-app {
+    height: 80px;
+    background-color: #eaeaea;
+}
+
+main {
+    display: flex;
+    height: calc(100% - 65px);
+    background-color: white;
+}
+
+/* left */
+
+aside {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 65px);
+    width: 35%;
+}
+header i,
+.desktop-notify,
+.send-msg{
+    color: grey;
+}
+.search-icon{
+    padding: 6px;
+    color: rgb(218, 218, 218);
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: .3125rem;
+}
+
+.form-control{
+    color: rgb(218, 218, 218);
+}
+aside ul {
+    padding-left: .625rem;
+}
+
+.left-bar .header-app {
+    border-right: 1px solid white;
+}
+.contact.active{
+    background-color: lightgray;
+  }
+
+/* notifiche */
+
+.notifiche {
+    background-color: #8edafc;
+}
+
+.notifiche .col-right {
+    padding: 1.25rem 0;
+    vertical-align: middle;
+}
+
+.notifiche .fa-bell-slash {
+    background-color: white;
+    font-size: 1.25rem;
+    color: #8edafc;
+}
+
+.notifiche a{
+    font-size: 14px;
+    color: grey;
+}
+/* contatti */
+
+.section-contacts img {
+    width: 3.75rem;
+}
+
+.section-contacts h3 {
+    font-size: 1.25rem;
+}
+
+.section-contacts .msg {
+    font-size: .75rem;
+}
+
+.contatti {
+    padding: 5px 10px
+}
+
+.contatti li>div {
+    padding-top: 10px;
+}
+
+.contatti .avatar-container {
+    padding-right: .625rem;
+}
+
+.section-contacts {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* right */
+.right-bar {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+.nome img {
+    width: 100%;
+}
+
+/* chat */
+.chat {
+    flex-grow: 1;
+    background-image: url(../../img/img/mine.jpg);
+    padding: 3.125rem;
+    overflow-y: auto;
+}
+
+
+.msg {
+    color: grey;
+}
+
+.container-messaggi.sent {
+    justify-content: flex-end;
+}
+
+.container-messaggi.sent .messaggio {
+    background-color: #d5f9ba;
+}
+
+.messaggio {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.container-messaggi:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* send msg */
+
+.send-msg {
+    height: 65px;
+    background-color: white;
+}
+
+.send-msg .col-center {
+    flex-grow: 1;
+}
+
+
+.send-msg .col-left,
+.send-msg .col-right {
+    justify-content: center;
+    display: flex;
+    font-size: 1.25rem;
+}

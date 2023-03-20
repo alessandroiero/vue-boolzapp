@@ -1,0 +1,10 @@
+/* Header */
+.green-bar {
+    background-color: #009688;
+    flex-grow: 1;
+    height: 100px;
+}
+
+.icona {
+    width: 80px;
+}
